@@ -124,6 +124,22 @@ main::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 25px;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+.logo {
+    font-weight: bold;
+}
+
+.estado {
+    color: #22c55e;
+}
+
 /* ANIMACIÓN */
 @keyframes aparecer {
     from {
