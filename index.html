@@ -1,11 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-ES">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chat Predictivo</title>
+    <link rel="stylesheet" href="/CSS/style.css">
 </head>
+
+<script type="module" src="/JS/script.js"></script>
+
 <body>
-    
+    <span id="progreso"></span>
+    <main>
+        <ul>
+        </ul>
+    </main>
+    <form>
+        <input type="text" placeholder="Escribe aquí tu promt...">
+        <button>Enviar</button>
+    </form>
+
+    <template id="plantilla">
+        <li class="mensaje">
+            <span></span>
+            <span></span>
+        </li>
+    </template>
 </body>
-</html> 
+
+</html>
