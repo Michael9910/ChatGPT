@@ -1,4 +1,3 @@
-/* RESET */
 * {
     margin: 0;
     padding: 0;
@@ -8,146 +7,256 @@
 body {
     font-family: 'Inter', sans-serif;
     height: 100vh;
-    background: radial-gradient(circle at center, #1e1b4b 0%, #020617 70%);
-    color: #e2e8f0;
+
+    background: radial-gradient(circle at top, #e0e7ff 0%, #f8fafc 60%, #eef2ff 100%);
+
+    color: #0f172a;
+
     display: flex;
     flex-direction: column;
-}
-
-/* PROGRESO */
-#progreso {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 12px;
-    opacity: 0.7;
-}
-
-/* CONTENEDOR PRINCIPAL */
-main {
-    flex: 1;
-    overflow-y: auto;
-    display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 40px 20px;
-}
 
-/* LISTA MENSAJES */
-ul {
-    width: 100%;
-    max-width: 700px;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* MENSAJE BASE */
-.mensaje {
-    display: flex;
-    flex-direction: column;
-    padding: 14px 18px;
-    border-radius: 18px;
-    max-width: 80%;
-    backdrop-filter: blur(10px);
-    animation: aparecer 0.3s ease;
-}
-
-/* TEXTO ROL */
-.mensaje span:first-child {
-    font-size: 12px;
-    opacity: 0.6;
-    margin-bottom: 4px;
-}
-
-/* TEXTO MENSAJE */
-.mensaje span:last-child {
-    font-size: 15px;
-    line-height: 1.4;
-}
-
-/* BOT (Nebula) */
-.bot {
-    align-self: flex-start;
-    background: linear-gradient(135deg, #4f46e5, #9333ea);
-    box-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
-    border: 1px solid rgba(255,255,255,0.1);
-}
-
-/* USUARIO */
-.usuario {
-    align-self: flex-end;
-    background: #1e293b;
-    border: 1px solid rgba(255,255,255,0.05);
-}
-
-/* FORM (INPUT) */
-form {
-    display: flex;
-    justify-content: center;
     padding: 20px;
 }
 
-/* INPUT FLOTANTE */
-input {
-    width: 100%;
-    max-width: 700px;
-    padding: 14px 18px;
-    border-radius: 999px;
-    border: 1px solid rgba(255,255,255,0.1);
-    outline: none;
-    background: rgba(15, 23, 42, 0.6);
-    color: white;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 15px rgba(99,102,241,0.2);
-    transition: 0.3s;
-}
-
-/* EFECTO AL ESCRIBIR */
-input:focus {
-    box-shadow: 0 0 25px rgba(99,102,241,0.5);
-    border-color: rgba(99,102,241,0.5);
-}
-
-/* BOTÓN (OCULTO PERO FUNCIONAL) */
-button {
-    display: none;
-}
-
-/* SCROLL BONITO */
-main::-webkit-scrollbar {
-    width: 6px;
-}
-
-main::-webkit-scrollbar-thumb {
-    background: rgba(99,102,241,0.4);
-    border-radius: 10px;
-}
-
 .header {
+    width: 100%;
+    max-width: 46%;
     display: flex;
     justify-content: space-between;
-    padding: 15px 25px;
-    font-size: 14px;
-    opacity: 0.9;
+    align-items: center;
+    margin-bottom: 12px;
 }
 
 .logo {
     font-weight: bold;
 }
 
-.estado {
-    color: #22c55e;
+.info {
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-/* ANIMACIÓN */
+.estado {
+    color: #16a34a;
+    font-weight: 500;
+}
+
+#progreso {
+    font-size: 12px;
+    opacity: 0.7;
+}
+
+.chat-container {
+    width: 100%;
+    max-width: 900px;
+    height: 80vh;
+
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(15, 23, 42, 0.1);
+
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+
+    overflow: hidden;
+}
+
+main {
+    flex: 1;
+    overflow-y: auto;
+
+    display: flex;
+    justify-content: center;
+
+    padding: 30px;
+}
+
+ul {
+    width: 100%;
+    max-width: 650px;
+
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: column;
+
+    padding: 14px 16px;
+
+    border-radius: 16px;
+
+    max-width: 80%;
+
+    animation: aparecer 0.2s ease;
+}
+
+.mensaje span:first-child {
+    font-size: 11px;
+    opacity: 0.6;
+    margin-bottom: 4px;
+}
+
+.mensaje span:last-child {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.bot {
+    align-self: flex-start;
+
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+
+    color: #1e1b4b;
+}
+
+.usuario {
+    align-self: flex-end;
+
+    background: #4f46e5;
+    color: white;
+}
+
+form {
+    padding: 16px;
+
+    border-top: 1px solid rgba(15,23,42,0.08);
+
+    display: flex;
+    justify-content: center;
+
+    background: rgba(255,255,255,0.6);
+}
+
+input {
+    width: 100%;
+    max-width: 650px;
+
+    padding: 14px 18px;
+
+    border-radius: 999px;
+
+    border: 1px solid rgba(15,23,42,0.15);
+
+    outline: none;
+
+    background: white;
+
+    font-size: 15px;
+}
+
+input:focus {
+    border-color: #6366f1;
+    box-shadow: 0 0 15px rgba(99,102,241,0.25);
+}
+
+button {
+    margin-left: 10px;
+
+    padding: 12px 16px;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(99,102,241,0.25);
+
+    background: #4f46e5;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+
+    box-shadow: 0 6px 15px rgba(79,70,229,0.18);
+}
+
+button:hover {
+    background: #4338ca;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 25px rgba(79,70,229,0.25);
+}
+
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0 5px 12px rgba(79,70,229,0.18);
+}
+
+main::-webkit-scrollbar {
+    width: 6px;
+}
+
+main::-webkit-scrollbar-thumb {
+    background: #c7d2fe;
+    border-radius: 10px;
+}
+
 @keyframes aparecer {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(8px);
     }
     to {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.typing {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dots {
+    display: flex;
+    gap: 4px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+
+    background: rgba(99,102,241,0.8);
+
+    border-radius: 50%;
+
+    animation: bounce 1.2s infinite ease-in-out;
+}
+
+.dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+    40% {
+        transform: translateY(-6px);
+        opacity: 1;
+    }
+}
+
+.typing-text {
+    font-size: 12px;
+    opacity: 0.7;
 }

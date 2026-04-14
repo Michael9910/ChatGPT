@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="es-ES">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Chat Predictivo</title>
-        <link rel="stylesheet" href="/CSS/style.css">
-    </head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nebula AI</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
 
-    <script type="module" src="/JS/script.js"></script>
+<body>
 
-    <body>
-        <header class="header">
-            <div class="logo">🟣 Nebula AI</div>
-            <div class="estado">● Online</div>
-        </header>
-        <span id="progreso"></span>
-        <main>
-            <ul>
-            </ul>
-        </main>
-        <form>
-            <input type="text" placeholder="Escribe aquí tu mensaje...">
-            <button>Enviar</button>
-        </form>
+<header class="header">
+    <div class="logo">Nebula AI</div>
 
-        <template id="plantilla">
-            <li class="mensaje">
-                <span></span>
-                <span></span>
-            </li>
-        </template>
-    </body>
+    <div class="info">
+        <span id="progreso">0%</span>
+        <span class="estado">● Online</span>
+    </div>
+</header>
 
+<div class="chat-container">
+    <main>
+        <ul></ul>
+    </main>
+
+    <form>
+        <input type="text" placeholder="Escribe aquí tu mensaje...">
+        <button>Enviar</button>
+    </form>
+</div>
+
+<script type="module" src="/JS/script.js"></script>
+
+</body>
 </html>
