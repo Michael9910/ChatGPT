@@ -85,7 +85,7 @@ boton.addEventListener("click", async (event) => {
   event.preventDefault();
 
   const mensajeUsuario = input.value.trim();
-  
+
   if (!mensajeUsuario || boton.disabled) return;
 
   input.value = "";
