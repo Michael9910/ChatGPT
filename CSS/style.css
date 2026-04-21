@@ -369,7 +369,6 @@ body.villano #modo {
     }
 }
 
-/* --- AJUSTES DE RESPONSIVIDAD --- */
 
 @media (max-width: 600px) {
     body {
@@ -377,7 +376,7 @@ body.villano #modo {
     }
 
     .header {
-        flex-direction: column; /* Apila logo y botones en móviles */
+        flex-direction: column;
         gap: 15px;
         padding: 15px;
         width: 95%;
@@ -394,9 +393,9 @@ body.villano #modo {
     }
 
     .chat-container {
-        height: 75vh; /* Un poco más bajo para dar aire */
+        height: 75vh;
         width: 100%;
-        box-shadow: 6px 6px 0px #000; /* Sombra más pequeña para pantallas chicas */
+        box-shadow: 6px 6px 0px #000;
     }
 
     main {
@@ -404,12 +403,12 @@ body.villano #modo {
     }
 
     .mensaje {
-        max-width: 95%; /* Que ocupen casi todo el ancho */
+        max-width: 95%; 
         font-size: 14px;
         padding: 10px 15px;
     }
 
-    /* Ajuste de los "picos" de los globos de texto para que no se desborden */
+
     .bot::before, .usuario::before {
         width: 12px;
         height: 12px;
@@ -417,7 +416,7 @@ body.villano #modo {
 
     form {
         padding: 10px;
-        flex-direction: row; /* Mantiene input y botón al lado */
+        flex-direction: row;
     }
 
     input {
@@ -433,7 +432,6 @@ body.villano #modo {
     }
 }
 
-/* Ajuste para pantallas muy pequeñas (relojes o móviles antiguos) */
 @media (max-width: 400px) {
     .header .info {
         display: grid;
