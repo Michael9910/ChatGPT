@@ -1,11 +1,13 @@
 import { CreateWebWorkerMLCEngine } from 'https://esm.run/@mlc-ai/web-llm';
 
-const SELECTED_MODEL = "Qwen2.5-Coder-0.5B-Instruct-q0f16-MLC";
+const SELECTED_MODEL = "Qwen2.5-1.5B-Instruct-q4f16_1-MLC";
 
+const botonNuevo = document.querySelector('#nuevoChat');
+const botonModo = document.querySelector('#modo');
 const input = document.querySelector('input');
 const mensajes = document.querySelector('ul');
 const contenedor = document.querySelector('main');
-const boton = document.querySelector('button');
+const boton = document.querySelector('form button');
 const progreso = document.querySelector('#progreso');
 
 input.disabled = true;
@@ -40,7 +42,6 @@ function agregarMensaje(texto, rol) {
   mensajes.appendChild(li);
   contenedor.scrollTop = contenedor.scrollHeight;
 }
-
 
 async function generarRespuestaStream() {
   const li = document.createElement("li");
@@ -114,5 +115,32 @@ boton.addEventListener("click", async (event) => {
 input.addEventListener("keydown", (e) => {
   if (e.key === "Enter" && !boton.disabled) {
     boton.click();
+  }
+});
+
+function limpiarChat() {
+  mensajes.innerHTML = "";
+
+  mensajesEnviados = [
+    {
+      role: "system",
+      content: "Eres Nebula, una IA estilo cómic, amigable y divertida."
+    }
+  ];
+
+  agregarMensaje("¡Nuevo chat iniciado! 🚀", "bot");
+}
+
+botonNuevo.addEventListener("click", () => {
+  limpiarChat();
+});
+
+botonModo.addEventListener("click", () => {
+  document.body.classList.toggle("villano");
+
+  if (document.body.classList.contains("villano")) {
+    botonModo.textContent = "Villano";
+  } else {
+    botonModo.textContent = "Héroe";
   }
 });
